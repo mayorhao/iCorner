@@ -1,229 +1,254 @@
 <html>
-    <head>
-        <meta charset="utf8">
-        <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700|Roboto:300,700' rel='stylesheet' type='text/css'>
 
-        <style>
-            
-            body {
-                background-color: #ccc;
-                font-family: 'Roboto', Arial，"Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
-                font-size: 20px;
-                text-shadow: 1px 1px #fff;
-            }
+<head>
+    <meta charset="utf8">
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700|Roboto:300,700' rel='stylesheet' type='text/css'>
 
-            #title {
-                width: 80%;
-                margin: 50px auto;
-                font-family: 'Oleo Script Swash Caps', Arial;
-                font-size: 120px;
-                text-shadow: 2px 5px rgba(100, 100, 100, 0.5);
-            }
-            .page {
-                width: 12%;
-                text-align: center;
-                padding: 20px 0;
-                float: left;
-                margin-right: 2.5%;
-                min-width: 100px;
-                margin-bottom: 10px;
-                position: relative;
-            }
-            
-            .code, pre {
-                font-family: monospace, Arial;
-                border: 2px dotted;
-                border-radius: 5px;
-                font-size: 15px;
-                max-width: 100%;
-                overflow-x: auto;
-                color: #666;
-            }
-            
-            pre {
-                padding: 10px;
-            }
-            
-            a {
-                text-decoration: none;
-                border-bottom: 2px dashed;
-            }
-            
-            .a {
-                background-color: #11A7FC;
-            }
-            .b {
-                background-color: #95D127;
-            }
-            .c {
-                background-color: #fff000;
-            }
-            .d {
-                background-color: #FF8638;
-            }
-            .e {
-                background-color: #EE3551;
-            }
-            .f {
-                background-color: #EE50CF;
-            }
-            .g {
-                background-color: #B544EE;
-                margin-right: 0;
-            }
-            .a_c {
-                color: #11A7FC;
-                font-weight: bold;
-            }
-            .b_c {
-                color: #95D127;
-                font-weight: bold;
-            }
-            .c_c {
-                color: #fff000;
-                font-weight: bold;
-                text-shadow: 1px 1px #666;
-            }
-            .d_c {
-                color: #FF8638;
-                font-weight: bold;
-            }
-            .e_c {
-                color: #EE3551;
-                font-weight: bold;
-            }
-            .f_c {
-                color: #EE50CF;
-                font-weight: bold;
-            }
-            .g_c {
-                color: #B544EE;
-                font-weight: bold;
-            }
+    <style>
+        body {
+            background-color: #ccc;
+            font-family: 'Roboto', Arial，"Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+            font-size: 20px;
+            text-shadow: 1px 1px #fff;
+        }
 
-            #subtitle {
-                text-align: center;
-                background-color: #eee;
-                background: url('example-background.png');
-                width: 500px;
-                padding: 50px 0;
-                max-width: 80%;
-                margin: 0 auto;
-                margin-bottom: 100px;
-              /*  font-family: qingshu, Arial;*/
-                font-size: 40px;
-                text-shadow: 1px 1px rgba(100, 100, 100, 0.5);
-            }
-            h1 {
-                font-size: 60px;
-                margin: 0;
-                font-family: 'Oleo Script Swash Caps', Arial;
-                text-shadow: 1px 1px #666;
-            }
-            h2 {
-                margin: 10px 0 5px 0;
-            }
-            
-            p {
-                margin: 15px 0;
-            }
+        #title {
+            width: 80%;
+            margin: 50px auto;
+            font-family: 'Oleo Script Swash Caps', Arial;
+            font-size: 120px;
+            text-shadow: 2px 5px rgba(100, 100, 100, 0.5);
+        }
 
-            .paper {
-                width: 70%;
-                padding: 50px 5%;
-                margin: 0 auto;
-                margin-bottom: 50px;
-                background-color: #eee;
-                background: url('example-background.png');
-            }
-            
-            a.button {
-                border-radius: 10px;
-                padding: 5px 20px;
-                margin-right: 20px;
-                margin-bottom: 10px;
-                color: #666;
-                text-shadow: none;
-            }
-        </style>
+        .page {
+            width: 12%;
+            text-align: center;
+            padding: 20px 0;
+            float: left;
+            margin-right: 2.5%;
+            min-width: 100px;
+            margin-bottom: 10px;
+            position: relative;
+        }
 
-        <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
-        <script src="iCorner.min.js" type="text/javascript"></script>
-    
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-38205696-1']);
-            _gaq.push(['_trackPageview']);
-            
-            (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-            
-            $(document).ready(function() {
-                $('.page').iCorner({
-                    background: '#ccc',
-                    size: 25
-                });
-                $('#subtitle').iCorner({
-                    background: '#ccc',
-                    size: 40,
-                    link: 'https://github.com/Ovilia/iCorner'
-                });
-                $('.paper').iCorner({
-                    background: '#ccc',
-                    size: 40
-                });
+        .code,
+        pre {
+            font-family: monospace, Arial;
+            border: 2px dotted;
+            border-radius: 5px;
+            font-size: 15px;
+            max-width: 100%;
+            overflow-x: auto;
+            color: #666;
+        }
+
+        pre {
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            border-bottom: 2px dashed;
+        }
+
+        .a {
+            background-color: #11A7FC;
+        }
+
+        .b {
+            background-color: #95D127;
+        }
+
+        .c {
+            background-color: #fff000;
+        }
+
+        .d {
+            background-color: #FF8638;
+        }
+
+        .e {
+            background-color: #EE3551;
+        }
+
+        .f {
+            background-color: #EE50CF;
+        }
+
+        .g {
+            background-color: #B544EE;
+            margin-right: 0;
+        }
+
+        .a_c {
+            color: #11A7FC;
+            font-weight: bold;
+        }
+
+        .b_c {
+            color: #95D127;
+            font-weight: bold;
+        }
+
+        .c_c {
+            color: #fff000;
+            font-weight: bold;
+            text-shadow: 1px 1px #666;
+        }
+
+        .d_c {
+            color: #FF8638;
+            font-weight: bold;
+        }
+
+        .e_c {
+            color: #EE3551;
+            font-weight: bold;
+        }
+
+        .f_c {
+            color: #EE50CF;
+            font-weight: bold;
+        }
+
+        .g_c {
+            color: #B544EE;
+            font-weight: bold;
+        }
+
+        #subtitle {
+            text-align: center;
+            background-color: #eee;
+            background: url('example-background.png');
+            width: 500px;
+            padding: 50px 0;
+            max-width: 80%;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            /*  font-family: qingshu, Arial;*/
+            font-size: 40px;
+            text-shadow: 1px 1px rgba(100, 100, 100, 0.5);
+        }
+
+        h1 {
+            font-size: 60px;
+            margin: 0;
+            font-family: 'Oleo Script Swash Caps', Arial;
+            text-shadow: 1px 1px #666;
+        }
+
+        h2 {
+            margin: 10px 0 5px 0;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        .paper {
+            width: 70%;
+            padding: 50px 5%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            background-color: #eee;
+            background: url('example-background.png');
+        }
+
+        a.button {
+            border-radius: 10px;
+            padding: 5px 20px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            color: #666;
+            text-shadow: none;
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="iCorner.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-38205696-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+                '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+        $(document).ready(function () {
+            $('.page').iCorner({
+                background: '#ccc',
+                size: 25
             });
-        </script>
-        
-    </head>
-    <body>
-        <div id="title">
-            <div class="page a">j</div>
-            <div class="page b">C</div>
-            <div class="page c">o</div>
-            <div class="page d">r</div>
-            <div class="page e">n</div>
-            <div class="page f">e</div>
-            <div class="page g">r</div>
-            <div style="clear: both"></div>
-        </div>
-        <div id="subtitle"><span class="d_c">一款jQuery插件</span> <br /><span class="e_c">可以使页面卷起一角</span><br />
-        
-        </div>
+            $('#subtitle').iCorner({
+                background: '#ccc',
+                size: 40,
+                link: 'https://github.com/Ovilia/iCorner'
+            });
+            $('.paper').iCorner({
+                background: '#ccc',
+                size: 40
+            });
+        });
+    </script>
 
-        <div class="paper">
-            <h1 class="a_c">简介</h1>
-            <p>iCorner能够在页面右下角制造<span class="a_c">卷角效果</span>，就像本页一样</p>
-            <p>通过使用<span class="a_c">CSS的border属性</span>来制造三角形，通过<span class="a_c">三角形的叠加</span>来实现视觉效果，同时也可以给卷角加上<span class="a_c">链接功能</span>，无需使用图片，卷角的<span class="a_c">大小可调</span></p>
-            <p>它是一个 <span class="a_c">超轻量级的</span>JavaScript插件，只有仅仅<span class="a_c">1.2KB</span>噢！ <a href="#download" class="a_c">马上下载！</a></p>
-        </div>
-        
-        <div class="paper">
-            <h1 class="b_c">使用方法</h1>
-            <p>第一步，需要在项目中引入<span class="b_c">jQuery.js</span>与<span class="b_c">icorner.js</span>文件</p>
-            <pre>
+</head>
+
+<body>
+    <div id="title">
+        <div class="page a">j</div>
+        <div class="page b">C</div>
+        <div class="page c">o</div>
+        <div class="page d">r</div>
+        <div class="page e">n</div>
+        <div class="page f">e</div>
+        <div class="page g">r</div>
+        <div style="clear: both"></div>
+    </div>
+    <div id="subtitle"><span class="d_c">一款jQuery插件</span> <br /><span class="e_c">可以使页面卷起一角</span><br />
+
+    </div>
+
+    <div class="paper">
+        <h1 class="a_c">简介</h1>
+        <p>iCorner能够在页面右下角制造<span class="a_c">卷角效果</span>，就像本页一样</p>
+        <p>通过使用<span class="a_c">CSS的border属性</span>来制造三角形，通过<span class="a_c">三角形的叠加</span>来实现视觉效果，同时也可以给卷角加上<span class="a_c">链接功能</span>，无需使用图片，卷角的
+            <span
+                class="a_c">大小可调</span>
+        </p>
+        <p>它是一个 <span class="a_c">超轻量级的</span>JavaScript插件，只有仅仅<span class="a_c">1.2KB</span>噢！ <a href="#download" class="a_c">马上下载！</a></p>
+    </div>
+
+    <div class="paper">
+        <h1 class="b_c">使用方法</h1>
+        <p>第一步，需要在项目中引入<span class="b_c">jQuery.js</span>与<span class="b_c">icorner.js</span>文件</p>
+        <pre>
 &lt;script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript">&lt;/script&gt
 &lt;script src="iCorner.js" type="text/javascript">&lt;/script&gt</pre>
-            <p>假设我们需要在id为 <span class="b_c">paper</span> 的div加上卷角效果，我们只需要这么做：</p>
-            <p>HTML:</p>
-            <pre>&lt;div id="paper"&gt&lt;/div&gt</pre>
-            <p>JavaScript:</p>
-            <pre>$('#paper').iCorner();</pre>
-            <p></p>
-        </div>
-        <div class="paper">
-            <h1 class="d_c">参数设置</h1>
-            <p>插件有四个插件可选，但您也可以直接使用默认设置:</p>
-            <pre>
+        <p>假设我们需要在id为 <span class="b_c">paper</span> 的div加上卷角效果，我们只需要这么做：</p>
+        <p>HTML:</p>
+        <pre>&lt;div id="paper"&gt&lt;/div&gt</pre>
+        <p>JavaScript:</p>
+        <pre>$('#paper').iCorner();</pre>
+        <p></p>
+    </div>
+    <div class="paper">
+        <h1 class="d_c">参数设置</h1>
+        <p>插件有四个插件可选，但您也可以直接使用默认设置:</p>
+        <pre>
 size: 40;
 id: undefined;
 link: undefined;
 background: '#fff'; </pre>
-            <p>比如:</p>
-            <pre>$('#paper').iCorner({
+        <p>比如:</p>
+        <pre>$('#paper').iCorner({
     size: 25,
     background: 'black'
 });
@@ -233,34 +258,34 @@ $('#paper').iCorner({
     link: 'about.html',
     id: 'about'
 });</pre>
-            
-            <h2 class="d_c">size</h2>
-            <p><span class="d_c">size</span>可选，能够调整卷角的大小，默认为40px</p>
-            <h2 class="d_c">id</h2>
-            <p>可选，选择是否为corner加上<span class="d_c">id</span>属性.如果id为<span class="d_c">undefined</span>，那么corner将不会有Id属性</p>
-            <h2 class="d_c">link</h2>
-            <p>可选，使corner被点击时，打开一个新窗口指向设置的链接,<span class="d_c">link</span>应设置成字符串，像这样：<span class="d_c">"http://idouyu.com"</span>.</p>
-            <h2 class="d_c">background</h2>
-            <p>强烈建议您根据页面不同的背景颜色，设置不同的<span class="d_c">background</span>值，这样才能够使卷角更加自然，在这个页面中，因为页面背景为灰色，所以，我将<span class="d_c">background</span> 设置为<span class="d_c">"#ccc"</span>，这样卷角效果毫无违和感</p>
-        </div>
-        
-        <div class="paper" id="download">
-            <h1 class="c_c">下载</h1>
-            <p>我提供了源码与压缩版，您可以自由选择</p>
-            <p>
-                
-                <a href="http://www.idouyu.cn/iCorner/iCorner.js" target="_blank" class="button c">点击下载 iCorner.js</a>
-                <a href="http://www.idouyu.cn/iCorner/iCorner.min.js" target="_blank" class="button c">点击下载 iCorner.min.js</a>
-                <div style="clear: both"></div>
-            </p>
-        </div>
-        
-        
-        
-        <div class="paper">
-            <h1 class="e_c">关于作者</h1>
-            <p>iCorner由菜鸟<span class="e_c">MayorHao</span>开发,去他的<a class="e_c" href="http://www.idouyu.cn/main.html">个人网站</a></p>
-            
-    </body>
-</html>
 
+        <h2 class="d_c">size</h2>
+        <p><span class="d_c">size</span>可选，能够调整卷角的大小，默认为40px</p>
+        <h2 class="d_c">id</h2>
+        <p>可选，选择是否为corner加上<span class="d_c">id</span>属性.如果id为<span class="d_c">undefined</span>，那么corner将不会有Id属性</p>
+        <h2 class="d_c">link</h2>
+        <p>可选，使corner被点击时，打开一个新窗口指向设置的链接,<span class="d_c">link</span>应设置成字符串，像这样：<span class="d_c">"http://idouyu.com"</span>.</p>
+        <h2 class="d_c">background</h2>
+        <p>强烈建议您根据页面不同的背景颜色，设置不同的<span class="d_c">background</span>值，这样才能够使卷角更加自然，在这个页面中，因为页面背景为灰色，所以，我将<span class="d_c">background</span>            设置为<span class="d_c">"#ccc"</span>，这样卷角效果毫无违和感</p>
+    </div>
+
+    <div class="paper" id="download">
+        <h1 class="c_c">下载</h1>
+        <p>我提供了源码与压缩版，您可以自由选择</p>
+        <p>
+
+            <a href="https://raw.githubusercontent.com/mayorhao/iCorner/master/iCorner.js" target="_blank" class="button c">点击下载 iCorner.js</a>
+            <a href="https://raw.githubusercontent.com/mayorhao/iCorner/master/iCorner.min.js" target="_blank" class="button c">点击下载 iCorner.min.js</a>
+            <div style="clear: both"></div>
+        </p>
+    </div>
+
+
+
+    <div class="paper">
+        <h1 class="e_c">关于作者</h1>
+        <p>iCorner由菜鸟<span class="e_c">MayorHao</span>开发,去他的<a class="e_c" href="http://www.idouyu.cn/main.html">个人网站</a></p>
+
+</body>
+
+</html>

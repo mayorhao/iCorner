@@ -1,1 +1,43 @@
-(function(e){e.fn.iCorner=function(t){return this.each(function(){var n=e.extend({size:40,id:undefined,link:undefined,background:"#fff"},t);var r=n.id===undefined?"":' id="'+n.id+'"';var i=n.link===undefined?"":'<a href="'+n.link+'" target="_blank">';var s=n.link===undefined?"":"</a>";var o="<div"+r+' class="jCorner" style="width: '+n.size*2+"px; height: "+n.size+'px; position: absolute; bottom: 0; right: 0;">'+i+'<div class="jCorner_left" style="border-width: 0 0 '+n.size+"px "+n.size+"px; width: 0px; height: 0px; border-style: solid; "+"border-color: transparent transparent #999 transparent; "+'opacity: 0.6; float: left; z-index: 10;"></div>'+'<div class="jCorner_square" style="border-width: 0 0 '+n.size+"px "+n.size+"px; border-color: transparent transparent "+n.background+" transparent; width: 0px; height: 0px; "+'border-style: solid; float: left;"></div>'+'<div class="jCorner_right" '+'style="border-width: '+n.size+"px "+n.size+"px 0 0; left: "+n.size+"px; top: -"+n.size+"px; width: 0px; "+"height: 0px; border-style: solid; "+"border-color: #fff transparent transparent transparent; "+"position: relative; opacity: 0.6; float: left; "+'z-index: 10;"></div>'+s;return e(this).append(o).css("position","relative")})}})(jQuery)
+(function($) {
+    $.fn.iCorner = function(options) {
+        return this.each(function() {
+            var settings = $.extend({
+                size: 40,
+                id: undefined,
+                link: undefined,
+                background: '#fff' 
+            }, options);
+
+            var id = settings.id === undefined ? '' : ' id="' 
+                    + settings.id + '"';
+            var a_start = settings.link === undefined ? '' : '<a href="'
+                    + settings.link + '" target="_blank">';
+            var a_end = settings.link === undefined ? '' : '</a>';
+            var element = '<div' + id + ' class="iCorner" style="width: '
+                    + settings.size * 2 + 'px; height: ' + settings.size
+                    + 'px; position: absolute; bottom: 0; right: 0;">' + a_start
+                    + '<div class="iCorner_left" style="border-width: 0 0 '
+                    + settings.size + 'px ' + settings.size 
+                    + 'px; width: 0px; height: 0px; border-style: solid; '
+                    + 'border-color: transparent transparent #999 transparent; '
+                    + 'opacity: 0.6; float: left; z-index: 10;"></div>'
+                    + '<div class="iCorner_square" style="border-width: 0 0 '
+                    + settings.size + 'px ' + settings.size 
+                    + 'px; border-color: transparent transparent ' 
+                    + settings.background 
+                    + ' transparent; width: 0px; height: 0px; '
+                    + 'border-style: solid; float: left;"></div>'
+                    + '<div class="iCorner_right" '
+                    + 'style="border-width: ' + settings.size + 'px ' 
+                    + settings.size + 'px 0 0; left: ' + settings.size 
+                    + 'px; top: -' + settings.size + 'px; width: 0px; '
+                    + 'height: 0px; border-style: solid; '
+                    + 'border-color: #fff transparent transparent transparent; '
+                    + 'position: relative; opacity: 0.6; float: left; '
+                    + 'z-index: 10;"></div>' 
+                    + a_end;
+
+            return $(this).append(element).css('position', 'relative');
+        });
+    }
+}(jQuery));
